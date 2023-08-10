@@ -1,5 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#6ccff5</color>
+    <color name="colorPrimaryDark">#46B7E3</color>
+    <color name="colorAccent">#1E2126</color>
+
+    <!--Gray Shades-->
+    <color name="dark_gray">#1E2126</color>
+    <color name="gray1">#5C6574</color>
+    <color name="gray2">#828B9A</color>
+    <color name="gray3">#B9C1CC</color>
+    <color name="gray4">#CAD1D9</color>
+    <color name="gray5">#E4E9ED</color>
+    <color name="gray6">#F0F3F8</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="whiteTrans">#80FFFFFF</color >
+    <color name="background_blue">#F3F8FF</color>
+    <color name="background_blue_light">#FAFCFF</color>
+    <color name="background_gray">#F7F7F7</color>
+
+    <!--Other Colors-->
+    <color name="red">#F13F11</color>
+    <color name="green">#93D406</color>
+    <color name="blue">#14C4E6</color>
+    <color name="blue_dark">#364FD4</color>
+    <color name="yellow">#FDC34E</color>
+
+    <!--Recycler Colors-->
+    <!--Light-->
+    <color name="color1">#C1EDD1</color>
+    <color name="color2">#FBE7D2</color>
+    <color name="color3">#F7A593</color>
+    <color name="color4">#D3B0E0</color>
+    <color name="color5">#FFF9E5</color>
+    <color name="color6">#D2E7F2</color>
+    <color name="color7">#D0C7FA</color>
+
+    <!--Dark-->
+    <color name="color8">#62CEF9</color>
+    <color name="color9">#4AC989</color>
+    <color name="color10">#A28EEC</color>
+    <color name="color11">#FF7070</color>
+    <color name="color12">#ECAC4A</color>
+    <color name="color13">#FB80BA</color>
 </resources>

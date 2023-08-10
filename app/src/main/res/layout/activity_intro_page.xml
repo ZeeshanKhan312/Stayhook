@@ -4,7 +4,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_gradient"
+    android:background="@color/white"
     tools:context=".intro.IntroPageActivity">
+
+    <TextView
+        android:id="@+id/introHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Find Home that Suits You"
+        android:textSize="@dimen/_13ssp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/_55sdp"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieView"
+        android:layout_width="@dimen/_240sdp"
+        android:layout_height="@dimen/_240sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/introHeading"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:elevation="@dimen/_5sdp"
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/search_lottie"/>
+
+    <TextView
+        android:id="@+id/introCmnt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_alignStart="@id/lottieView"
+        android:layout_alignEnd="@id/lottieView"
+        android:layout_below="@id/lottieView"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text="@string/lorem_ipsum"
+        android:textSize="@dimen/_9ssp"/>
+    
+    <TextView
+        android:id="@+id/getStartedBtn"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@drawable/rectangle_box"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_40sdp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="@dimen/_14ssp"
+        android:text="Get Started"
+        android:gravity="center"/>
+
 
 </RelativeLayout>
