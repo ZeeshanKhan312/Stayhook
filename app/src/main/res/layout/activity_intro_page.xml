@@ -12,10 +12,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:fontFamily="@font/clearsans_bold"
         android:text="Find Home that Suits You"
         android:textSize="@dimen/_13ssp"
         android:textColor="@color/black"
-        android:textStyle="bold"
         android:layout_marginTop="@dimen/_55sdp"/>
 
     <com.airbnb.lottie.LottieAnimationView
@@ -33,14 +33,18 @@
         android:id="@+id/introCmnt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
+        android:layout_below="@id/lottieView"
         android:layout_alignStart="@id/lottieView"
         android:layout_alignEnd="@id/lottieView"
-        android:layout_below="@id/lottieView"
-        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="-1dp"
+        android:fontFamily="@font/clearsans_regular"
+        android:gravity="center"
         android:text="@string/lorem_ipsum"
-        android:textSize="@dimen/_9ssp"/>
-    
+        android:textSize="@dimen/_9ssp"
+        android:textColor="@color/black"/>
+
     <TextView
         android:id="@+id/getStartedBtn"
         android:layout_width="@dimen/_150sdp"
@@ -50,6 +54,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="@dimen/_40sdp"
         android:textColor="@color/white"
+        android:fontFamily="@font/clearsans_medium"
         android:textStyle="bold"
         android:textSize="@dimen/_14ssp"
         android:text="Get Started"

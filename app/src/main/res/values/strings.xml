@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Stayhook</string>
     <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore. quis exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat </string>
+    <string name="verification_text">We have sent the verification code to</string>
 </resources>

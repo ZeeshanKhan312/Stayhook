@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".auth.OtpAuthActivity">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_250sdp"
+        android:orientation="vertical"
+        android:background="@drawable/curved_top_background">
+        <ImageView
+            android:id="@+id/appName"
+            android:layout_width="@dimen/_110sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/app_name"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_60sdp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/clearsans_bold"
+            android:text="Verification Code"
+            android:textSize="@dimen/_18sdp"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginLeft="@dimen/_16sdp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/clearsans_medium"
+            android:text="@string/verification_text"
+            android:textSize="@dimen/_14sdp"
+            android:textColor="@color/gray1"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_16sdp"/>
+        <TextView
+            android:id="@+id/number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/clearsans_medium"
+            android:text="12345"
+            android:textSize="@dimen/_14sdp"
+            android:textColor="@color/gray1"
+            android:layout_marginLeft="@dimen/_16sdp"/>
+
+    </LinearLayout>
+
+    <in.aabhasjindal.otptextview.OtpTextView
+        android:id="@+id/otpView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_220sdp"
+        android:layout_marginLeft="@dimen/_28sdp"
+        android:layout_marginRight="@dimen/_28sdp"
+        app:box_margin_right="@dimen/_6sdp"
+        android:textColor="@color/black"
+        app:bar_enabled="true"
+        app:bar_active_color="@color/gray1"
+        app:bar_inactive_color="#00000000"
+        app:bar_height="3dp"
+        app:bar_margin="@dimen/_8sdp"
+        app:height="@dimen/_52sdp"
+        app:width="@dimen/_52sdp"
+        app:length="4"
+        app:otp=""
+        app:otp_box_background="@drawable/grey_box"
+        app:otp_text_size="@dimen/_22ssp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Didn't receive any code? "
+        android:layout_below="@id/otpView"
+        android:layout_toLeftOf="@id/resendCodeBtn"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:fontFamily="@font/clearsans_regular"
+        android:textSize="@dimen/_12sdp"
+        android:textColor="@color/gray2"/>
+    <TextView
+        android:id="@+id/resendCodeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resent New Code"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_below="@id/otpView"
+        android:layout_alignEnd="@id/otpView"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:fontFamily="@font/clearsans_medium"
+        android:textSize="@dimen/_12sdp"/>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@id/resendCodeBtn">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/verifyBtn"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/_50sdp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/rectangle_box"
+            android:textColor="@color/white"
+            android:fontFamily="@font/clearsans_medium"
+            android:textStyle="bold"
+            android:textSize="@dimen/_14ssp"
+            android:text="Verify"
+            android:gravity="center"/>
+    </RelativeLayout>
+</ScrollView>
+
+</RelativeLayout>

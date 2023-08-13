@@ -20,6 +20,16 @@
         android:theme="@style/Theme.Stayhook"
         tools:targetApi="31">
         <activity
+            android:name=".location.LocationPermissionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".auth.OtpAuthActivity"
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+        <activity
+            android:name=".auth.SignInActivity"
+            android:exported="false" />
+        <activity
             android:name=".auth.SignUpActivity"
             android:exported="false" />
         <activity
