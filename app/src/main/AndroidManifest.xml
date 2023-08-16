@@ -20,30 +20,46 @@
         android:theme="@style/Theme.Stayhook"
         tools:targetApi="31">
         <activity
-            android:name=".location.LocationPermissionActivity"
+            android:name=".dashboard.DashboardActivity"
             android:exported="false" />
+        <activity
+            android:name=".location.LocationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".location.LocationPermissionActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".auth.OtpAuthActivity"
             android:exported="false"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysVisible" />
         <activity
             android:name=".auth.SignInActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".auth.SignUpActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".intro.IntroPageActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".SplashScreenActivity"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDdjn78Q56nymORUkHZvTxNfm7czVEroXY" />
     </application>
 
 </manifest>

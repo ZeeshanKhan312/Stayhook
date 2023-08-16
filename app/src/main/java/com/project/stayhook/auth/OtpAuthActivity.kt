@@ -22,7 +22,7 @@ class OtpAuthActivity : AppCompatActivity() {
         otpTextView=findViewById(R.id.otpView)
         verifyBtn=findViewById(R.id.verifyBtn)
 
-        number.text=Intent.getIntentOld("phoneNumber").toString()
+        number.text=intent.getStringExtra("phoneNumber")
 
         otpTextView.requestFocusOTP()
         otpTextView.otpListener= object : OTPListener {

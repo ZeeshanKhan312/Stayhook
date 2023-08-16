@@ -13,4 +13,8 @@
     </style>
 
     <style name="Theme.Stayhook" parent="Base.Theme.Stayhook" />
+
+    <style name="CardViewBackground">
+        <item name="android:background">@color/white</item>
+    </style>
 </resources>

@@ -27,9 +27,11 @@ class SignUpActivity : AppCompatActivity() {
 
         signUpBtn.setOnClickListener {
             val name:String=fullName.text.toString()
-            val number:String=fullName.text.toString()
+            val number:String=phoneNumber.text.toString()
             if(name.isNotEmpty() && number.isNotEmpty()){
-                startActivity(Intent(this,OtpAuthActivity::class.java))
+                val intent=Intent(this,OtpAuthActivity::class.java)
+                intent.putExtra("phoneNumber",number)
+                startActivity(intent)
             }
             else{
                 Toast.makeText(this, "Please enter all the required Details!!", Toast.LENGTH_SHORT).show()

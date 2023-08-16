@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/_10sdp"
+    android:elevation="@dimen/_8sdp"
+    app:cardCornerRadius="@dimen/_15sdp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:padding="@dimen/_10sdp">
+        <ImageView
+            android:id="@+id/housePic"
+            android:layout_width="@dimen/_65sdp"
+            android:layout_height="@dimen/_65sdp"
+            android:src="@drawable/house_pic"
+            android:layout_alignParentLeft="true"/>
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@id/housePic"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:fontFamily="@font/clearsans_regular"
+            android:text="Rs 9000"
+            android:textSize="@dimen/_6sdp"
+            android:textColor="@color/white"
+            android:background="@color/colorPrimary"
+            android:padding="@dimen/_3sdp"/>
+        <TextView
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:fontFamily="@font/clearsans_regular"
+            android:text="3.5 "
+            android:drawableRight="@drawable/white_star"
+            android:textSize="@dimen/_6sdp"
+            android:textColor="@color/white"
+            android:background="@drawable/green_box"
+            android:padding="@dimen/_3sdp"/>
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/housePic"
+            android:layout_below="@id/price"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/clearsans_bold"
+            android:textColor="@color/black"
+            android:text="1 Room Available"
+            android:textSize="@dimen/_10sdp"/>
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/housePic"
+            android:layout_below="@id/description"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:fontFamily="@font/clearsans_regular"
+            android:textColor="@color/gray1"
+            android:text="Mahalaxmi, Lalitpur"
+            android:textSize="@dimen/_8sdp"/>
+
+
+        <TextView
+            android:id="@+id/distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/housePic"
+            android:layout_below="@id/location"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:fontFamily="@font/clearsans_regular"
+            android:textColor="@color/gray2"
+            android:drawableLeft="@drawable/location_icon"
+            android:text=" 3.2 Km from Noida"
+            android:textSize="@dimen/_6sdp"/>
+
+        <TextView
+            android:id="@+id/preference"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/location"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:drawableLeft="@drawable/blue_circle"
+            android:fontFamily="@font/clearsans_regular"
+            android:text=" Unisex"
+            android:textColor="@color/gray2"
+            android:textSize="@dimen/_6sdp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

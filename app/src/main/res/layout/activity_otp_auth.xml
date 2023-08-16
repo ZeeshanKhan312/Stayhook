@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/clearsans_medium"
             android:text="@string/verification_text"
-            android:textSize="@dimen/_14sdp"
+            android:textSize="@dimen/_13sdp"
             android:textColor="@color/gray1"
             android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginLeft="@dimen/_16sdp"/>
@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/clearsans_medium"
             android:text="12345"
-            android:textSize="@dimen/_14sdp"
+            android:textSize="@dimen/_13sdp"
             android:textColor="@color/gray1"
             android:layout_marginLeft="@dimen/_16sdp"/>
 
@@ -104,12 +104,12 @@
             android:id="@+id/verifyBtn"
             android:layout_width="@dimen/_200sdp"
             android:layout_height="@dimen/_32sdp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="@dimen/_50sdp"
+            android:layout_marginTop="@dimen/_70sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
             android:layout_centerHorizontal="true"
             android:background="@drawable/rectangle_box"
             android:textColor="@color/white"
-            android:fontFamily="@font/clearsans_medium"
+            android:fontFamily="@font/clearsans_bold"
             android:textStyle="bold"
             android:textSize="@dimen/_14ssp"
             android:text="Verify"

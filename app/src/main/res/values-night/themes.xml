@@ -11,4 +11,8 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" >?attr/colorPrimaryVariant</item>
     </style>
+
+    <style name="CardViewBackground">
+        <item name="android:background">@color/white</item>
+    </style>
 </resources>
