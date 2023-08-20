@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
@@ -17,7 +18,7 @@ import com.project.stayhook.common.HouseListActivity
 
 class HomeFragment : Fragment() {
     private lateinit var location:TextView
-    private lateinit var searchValue:TextView
+    private lateinit var searchValue:EditText
     private lateinit var searchBtn:ImageView
     private lateinit var allRecommendation:TextView
     private lateinit var allRecentlyAdded:TextView

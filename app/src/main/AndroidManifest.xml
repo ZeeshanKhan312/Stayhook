@@ -20,6 +20,9 @@
         android:theme="@style/Theme.Stayhook"
         tools:targetApi="31">
         <activity
+            android:name=".search.SearchListActivity"
+            android:exported="false" />
+        <activity
             android:name=".common.HouseListActivity"
             android:exported="false" />
         <activity

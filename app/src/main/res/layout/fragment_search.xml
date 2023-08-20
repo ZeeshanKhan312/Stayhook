@@ -1,14 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".search.SearchFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="@dimen/_170sdp"
+        android:background="@drawable/curved_top_background"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:fontFamily="@font/clearsans_bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18ssp"
+            android:text="Search"
+            android:gravity="center"
+            android:drawableLeft="@drawable/back"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"/>
 
-</FrameLayout>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            app:cardCornerRadius="@dimen/_3sdp"
+            app:cardElevation="@dimen/_10sdp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:padding="@dimen/_3sdp">
+                <EditText
+                    android:id="@+id/searchValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/searchBtn"
+                    android:layout_alignParentLeft="true"
+                    android:drawableLeft="@drawable/location_icon"
+                    android:drawablePadding="@dimen/_4sdp"
+                    android:fontFamily="@font/clearsans_regular"
+                    android:hint="Find a near place for staying"
+                    android:textColorHint="@color/gray1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11ssp"/>
+
+                <ImageView
+                    android:id="@+id/searchBtn"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/search"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/colorPrimaryDark"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+
+
+</RelativeLayout>
