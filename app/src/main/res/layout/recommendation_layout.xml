@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_160sdp"
+    android:layout_height="@dimen/_190sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/_4sdp"
+    app:cardElevation="@dimen/_10sdp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:padding="@dimen/_10sdp">
+
+        <ImageView
+            android:id="@+id/houseImage"
+            android:layout_width="@dimen/_140sdp"
+            android:layout_height="@dimen/_110sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/recommend_house"/>
+
+        <TextView
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/houseImage"
+            android:fontFamily="@font/clearsans_medium"
+            android:text="4.5"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_8ssp"
+            android:drawableLeft="@drawable/golden_star"
+            android:drawablePadding="@dimen/_3sdp"/>
+
+        <TextView
+            android:id="@+id/houseType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/houseImage"
+            android:fontFamily="@font/clearsans_regular"
+            android:text="House"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/_8ssp"/>
+
+        <TextView
+            android:id="@+id/houseName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/houseType"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:fontFamily="@font/clearsans_medium"
+            android:text="Primary Apartment"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10ssp"/>
+
+        <TextView
+            android:id="@+id/houseLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/houseName"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/clearsans_regular"
+            android:drawableLeft="@drawable/location_icon"
+            android:drawablePadding="@dimen/_2sdp"
+            android:text="Noida, India"
+            android:textColor="@color/gray1"
+            android:textSize="@dimen/_6ssp"/>
+
+        <TextView
+            android:id="@+id/housePrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/houseLocation"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/clearsans_medium"
+            android:text="$ 12,00 /month"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/_8ssp"/>
+
+        <ImageView
+            android:id="@+id/liked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@id/housePrice"
+            android:src="@drawable/heart"/>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

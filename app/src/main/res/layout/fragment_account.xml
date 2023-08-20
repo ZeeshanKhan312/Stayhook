@@ -14,7 +14,7 @@
         android:fontFamily="@font/clearsans_bold"
         android:textColor="@color/white"
         android:text="Account"
-        android:textSize="@dimen/_28sdp"
+        android:textSize="@dimen/_26ssp"
         android:gravity="center"/>
 
 
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/profileImage"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_6sdp"
         android:text="Zeeshan Khan"
         android:fontFamily="@font/clearsans_bold"
         android:textColor="@color/black"
@@ -159,7 +159,7 @@
                 android:text="Applied"
                 android:background="@color/colorPrimary"
                 android:gravity="center"
-                android:textSize="@dimen/_14ssp"
+                android:textSize="@dimen/_12ssp"
                 android:textColor="@color/white"
                 android:textStyle="bold"/>
             <TextView
@@ -171,7 +171,7 @@
                 android:paddingBottom="@dimen/_4sdp"
                 android:text="Liked"
                 android:gravity="center"
-                android:textSize="@dimen/_14ssp"
+                android:textSize="@dimen/_12ssp"
                 android:textColor="@color/black"
                 android:textStyle="bold"/>
         </LinearLayout>
