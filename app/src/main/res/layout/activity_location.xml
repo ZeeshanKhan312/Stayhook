@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:text="Location"
             android:textColor="@color/white"
-            android:textSize="@dimen/_18ssp"
+            android:textSize="@dimen/_16ssp"
             android:fontFamily="@font/clearsans_bold" />
     </Toolbar>
 

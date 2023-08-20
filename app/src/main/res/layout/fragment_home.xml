@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/white"
     tools:context=".dashboard.HomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,29 +37,30 @@
             android:layout_marginLeft="@dimen/_15sdp"
             android:layout_marginRight="@dimen/_15sdp"
             app:cardCornerRadius="@dimen/_3sdp"
-            app:cardElevation="@dimen/_12sdp">
+            app:cardElevation="@dimen/_10sdp">
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/white"
-                android:padding="@dimen/_5sdp">
+                android:padding="@dimen/_3sdp">
                 <EditText
                     android:id="@+id/searchValue"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/searchBtn"
                     android:layout_alignParentLeft="true"
                     android:drawableLeft="@drawable/location_icon"
-                    android:drawablePadding="@dimen/_5sdp"
+                    android:drawablePadding="@dimen/_4sdp"
                     android:fontFamily="@font/clearsans_regular"
                     android:hint="Find a near place for staying"
                     android:textColorHint="@color/gray1"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/_12ssp"/>
+                    android:textSize="@dimen/_11ssp"/>
 
                 <ImageView
                     android:id="@+id/searchBtn"
-                    android:layout_width="@dimen/_32sdp"
-                    android:layout_height="@dimen/_32sdp"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
                     android:layout_alignParentRight="true"
                     android:src="@drawable/search"
                     android:layout_gravity="center_vertical"
@@ -69,7 +76,7 @@
             android:text="Find"
             android:textColor="@color/white"
             android:textSize="@dimen/_14ssp"
-            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_15sdp"
             android:layout_marginLeft="@dimen/_15sdp"/>
 
     </LinearLayout>
@@ -87,8 +94,8 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/findFlat"
-                android:layout_width="@dimen/_52sdp"
-                android:layout_height="@dimen/_46sdp"
+                android:layout_width="@dimen/_56sdp"
+                android:layout_height="@dimen/_50sdp"
                 app:cardCornerRadius="@dimen/_5sdp"
                 android:elevation="@dimen/_8sdp">
                 <LinearLayout
@@ -98,8 +105,8 @@
                     android:orientation="vertical"
                     android:padding="@dimen/_4sdp">
                     <ImageView
-                        android:layout_width="@dimen/_22sdp"
-                        android:layout_height="@dimen/_22sdp"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
                         android:layout_gravity="center_horizontal"
                         android:src="@drawable/flat"/>
                     <TextView
@@ -109,7 +116,7 @@
                         android:layout_marginTop="@dimen/_5sdp"
                         android:fontFamily="@font/clearsans_regular"
                         android:text="Flat"
-                        android:textSize="@dimen/_7ssp"
+                        android:textSize="@dimen/_8ssp"
                         android:textColor="@color/gray1"/>
                 </LinearLayout>
 
@@ -117,8 +124,8 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/findApartment"
-                android:layout_width="@dimen/_52sdp"
-                android:layout_height="@dimen/_46sdp"
+                android:layout_width="@dimen/_56sdp"
+                android:layout_height="@dimen/_50sdp"
                 android:layout_marginLeft="@dimen/_10sdp"
                 app:cardCornerRadius="@dimen/_5sdp"
                 android:elevation="@dimen/_8sdp">
@@ -129,8 +136,8 @@
                     android:orientation="vertical"
                     android:padding="@dimen/_4sdp">
                     <ImageView
-                        android:layout_width="@dimen/_22sdp"
-                        android:layout_height="@dimen/_22sdp"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
                         android:layout_gravity="center_horizontal"
                         android:src="@drawable/apartment"/>
                     <TextView
@@ -140,7 +147,7 @@
                         android:layout_marginTop="@dimen/_5sdp"
                         android:fontFamily="@font/clearsans_regular"
                         android:text="Apartment"
-                        android:textSize="@dimen/_7ssp"
+                        android:textSize="@dimen/_8ssp"
                         android:textColor="@color/gray1"/>
                 </LinearLayout>
 
@@ -148,8 +155,8 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/findPrivateRoom"
-                android:layout_width="@dimen/_52sdp"
-                android:layout_height="@dimen/_46sdp"
+                android:layout_width="@dimen/_56sdp"
+                android:layout_height="@dimen/_50sdp"
                 android:layout_marginLeft="@dimen/_10sdp"
                 app:cardCornerRadius="@dimen/_5sdp"
                 android:elevation="@dimen/_8sdp">
@@ -160,8 +167,8 @@
                     android:orientation="vertical"
                     android:padding="@dimen/_4sdp">
                     <ImageView
-                        android:layout_width="@dimen/_22sdp"
-                        android:layout_height="@dimen/_22sdp"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
                         android:layout_gravity="center_horizontal"
                         android:src="@drawable/private_room"/>
                     <TextView
@@ -171,7 +178,7 @@
                         android:layout_marginTop="@dimen/_5sdp"
                         android:fontFamily="@font/clearsans_regular"
                         android:text="Private Room"
-                        android:textSize="@dimen/_7ssp"
+                        android:textSize="@dimen/_8ssp"
                         android:textColor="@color/gray1"/>
                 </LinearLayout>
 
@@ -179,8 +186,8 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/findSharedRoom"
-                android:layout_width="@dimen/_52sdp"
-                android:layout_height="@dimen/_46sdp"
+                android:layout_width="@dimen/_56sdp"
+                android:layout_height="@dimen/_50sdp"
                 android:layout_marginLeft="@dimen/_10sdp"
                 app:cardCornerRadius="@dimen/_5sdp"
                 android:elevation="@dimen/_8sdp">
@@ -191,8 +198,8 @@
                     android:orientation="vertical"
                     android:padding="@dimen/_4sdp">
                     <ImageView
-                        android:layout_width="@dimen/_22sdp"
-                        android:layout_height="@dimen/_22sdp"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
                         android:layout_gravity="center_horizontal"
                         android:src="@drawable/shared_room"/>
                     <TextView
@@ -202,7 +209,7 @@
                         android:layout_marginTop="@dimen/_5sdp"
                         android:fontFamily="@font/clearsans_regular"
                         android:text="Shared Room"
-                        android:textSize="@dimen/_7ssp"
+                        android:textSize="@dimen/_8ssp"
                         android:textColor="@color/gray1"/>
                 </LinearLayout>
 
@@ -210,8 +217,8 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/findHouse"
-                android:layout_width="@dimen/_52sdp"
-                android:layout_height="@dimen/_46sdp"
+                android:layout_width="@dimen/_56sdp"
+                android:layout_height="@dimen/_50sdp"
                 android:layout_marginLeft="@dimen/_10sdp"
                 app:cardCornerRadius="@dimen/_5sdp"
                 android:elevation="@dimen/_8sdp">
@@ -222,8 +229,8 @@
                     android:orientation="vertical"
                     android:padding="@dimen/_4sdp">
                     <ImageView
-                        android:layout_width="@dimen/_22sdp"
-                        android:layout_height="@dimen/_22sdp"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
                         android:layout_gravity="center_horizontal"
                         android:src="@drawable/house"/>
                     <TextView
@@ -233,7 +240,7 @@
                         android:layout_marginTop="@dimen/_5sdp"
                         android:fontFamily="@font/clearsans_regular"
                         android:text="House"
-                        android:textSize="@dimen/_7ssp"
+                        android:textSize="@dimen/_8ssp"
                         android:textColor="@color/gray1"/>
                 </LinearLayout>
 
@@ -241,8 +248,8 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/findVilla"
-                android:layout_width="@dimen/_52sdp"
-                android:layout_height="@dimen/_46sdp"
+                android:layout_width="@dimen/_56sdp"
+                android:layout_height="@dimen/_50sdp"
                 android:layout_marginLeft="@dimen/_10sdp"
                 app:cardCornerRadius="@dimen/_5sdp"
                 android:elevation="@dimen/_8sdp">
@@ -253,8 +260,8 @@
                     android:orientation="vertical"
                     android:padding="@dimen/_4sdp">
                     <ImageView
-                        android:layout_width="@dimen/_22sdp"
-                        android:layout_height="@dimen/_22sdp"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
                         android:layout_gravity="center_horizontal"
                         android:src="@drawable/villa"/>
                     <TextView
@@ -264,7 +271,7 @@
                         android:layout_marginTop="@dimen/_5sdp"
                         android:fontFamily="@font/clearsans_regular"
                         android:text="Villa"
-                        android:textSize="@dimen/_7ssp"
+                        android:textSize="@dimen/_8ssp"
                         android:textColor="@color/gray1"/>
                 </LinearLayout>
 
@@ -272,8 +279,8 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/findKothi"
-                android:layout_width="@dimen/_52sdp"
-                android:layout_height="@dimen/_46sdp"
+                android:layout_width="@dimen/_56sdp"
+                android:layout_height="@dimen/_50sdp"
                 android:layout_marginLeft="@dimen/_10sdp"
                 app:cardCornerRadius="@dimen/_5sdp"
                 android:elevation="@dimen/_8sdp">
@@ -284,8 +291,8 @@
                     android:orientation="vertical"
                     android:padding="@dimen/_4sdp">
                     <ImageView
-                        android:layout_width="@dimen/_22sdp"
-                        android:layout_height="@dimen/_22sdp"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
                         android:layout_gravity="center_horizontal"
                         android:src="@drawable/apartment"/>
                     <TextView
@@ -295,7 +302,7 @@
                         android:layout_marginTop="@dimen/_5sdp"
                         android:fontFamily="@font/clearsans_regular"
                         android:text="Kothi"
-                        android:textSize="@dimen/_7ssp"
+                        android:textSize="@dimen/_8ssp"
                         android:textColor="@color/gray1"/>
                 </LinearLayout>
 
@@ -303,8 +310,8 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/findPG"
-                android:layout_width="@dimen/_52sdp"
-                android:layout_height="@dimen/_46sdp"
+                android:layout_width="@dimen/_56sdp"
+                android:layout_height="@dimen/_50sdp"
                 android:layout_marginLeft="@dimen/_10sdp"
                 app:cardCornerRadius="@dimen/_5sdp"
                 android:elevation="@dimen/_8sdp">
@@ -315,8 +322,8 @@
                     android:orientation="vertical"
                     android:padding="@dimen/_4sdp">
                     <ImageView
-                        android:layout_width="@dimen/_22sdp"
-                        android:layout_height="@dimen/_22sdp"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
                         android:layout_gravity="center_horizontal"
                         android:src="@drawable/private_room"/>
                     <TextView
@@ -326,15 +333,15 @@
                         android:layout_marginTop="@dimen/_5sdp"
                         android:fontFamily="@font/clearsans_regular"
                         android:text="P.G"
-                        android:textSize="@dimen/_7ssp"
+                        android:textSize="@dimen/_8ssp"
                         android:textColor="@color/gray1"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/findCoLiving"
-                android:layout_width="@dimen/_52sdp"
-                android:layout_height="@dimen/_46sdp"
+                android:layout_width="@dimen/_56sdp"
+                android:layout_height="@dimen/_50sdp"
                 android:layout_marginLeft="@dimen/_10sdp"
                 app:cardCornerRadius="@dimen/_5sdp"
                 android:elevation="@dimen/_8sdp">
@@ -345,8 +352,8 @@
                     android:orientation="vertical"
                     android:padding="@dimen/_4sdp">
                     <ImageView
-                        android:layout_width="@dimen/_22sdp"
-                        android:layout_height="@dimen/_22sdp"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
                         android:layout_gravity="center_horizontal"
                         android:src="@drawable/shared_room"/>
                     <TextView
@@ -356,7 +363,7 @@
                         android:layout_marginTop="@dimen/_5sdp"
                         android:fontFamily="@font/clearsans_regular"
                         android:text="Co-Living"
-                        android:textSize="@dimen/_7ssp"
+                        android:textSize="@dimen/_8ssp"
                         android:textColor="@color/gray1"/>
                 </LinearLayout>
 
@@ -378,6 +385,7 @@
         android:text="Recommendations"/>
 
     <TextView
+        android:id="@+id/allRecommendation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/find_section"
@@ -393,7 +401,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recommendationRV"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_160sdp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/text1"
         android:padding="@dimen/_10sdp"
         android:orientation="horizontal"/>
@@ -412,6 +420,7 @@
         android:text="Recently added"/>
 
     <TextView
+        android:id="@+id/allRecentlyAdded"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/find_section"
@@ -429,6 +438,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/text2"
-        android:padding="@dimen/_10sdp" />
+        android:padding="@dimen/_5sdp" />
 
-</RelativeLayout>
+    </RelativeLayout>
+
+</ScrollView>
