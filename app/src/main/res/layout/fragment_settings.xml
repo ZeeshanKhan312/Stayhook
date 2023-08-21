@@ -19,7 +19,7 @@
             android:text="Settings"
             android:gravity="center"
             android:textColor="@color/white"
-            android:textSize="@dimen/_26ssp"/>
+            android:textSize="@dimen/_22ssp"/>
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profileImage"
@@ -89,12 +89,12 @@
                 android:layout_below="@id/email"/>
 
             <TextView
-                android:id="@+id/myApplied"
+                android:id="@+id/scheduledVisit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/clearsans_medium"
                 android:textColor="@color/black"
-                android:text="My Applied "
+                android:text="My Scheduled Visits "
                 android:textSize="@dimen/_14ssp"
                 android:padding="@dimen/_4sdp"
                 android:drawableRight="@drawable/blue_left"/>
@@ -106,12 +106,12 @@
                 android:layout_below="@id/email"/>
 
             <TextView
-                android:id="@+id/myLiked"
+                android:id="@+id/moveInAndOut"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/clearsans_medium"
                 android:textColor="@color/black"
-                android:text="My Liked"
+                android:text="Move-In / Move-Out"
                 android:textSize="@dimen/_14ssp"
                 android:padding="@dimen/_4sdp"
                 android:drawableRight="@drawable/blue_left"/>
@@ -139,12 +139,12 @@
                 android:background="@color/gray3"
                 android:layout_below="@id/email"/>
             <TextView
-                android:id="@+id/downloadDocument"
+                android:id="@+id/uploadDocument"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/clearsans_medium"
                 android:textColor="@color/black"
-                android:text="Upload Document"
+                android:text="Upload Document (KYC)"
                 android:textSize="@dimen/_14ssp"
                 android:padding="@dimen/_4sdp"
                 android:drawableRight="@drawable/blue_left"/>

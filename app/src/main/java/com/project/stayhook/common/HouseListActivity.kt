@@ -3,6 +3,7 @@ package com.project.stayhook.common
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -12,6 +13,7 @@ import com.project.stayhook.dashboard.DashboardActivity
 class HouseListActivity : AppCompatActivity() {
     private lateinit var typeFilter:TextView
     private lateinit var recyclerView:RecyclerView
+    private lateinit var filterBtn:ImageView
 
     val list=ArrayList<String>()
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,9 +22,10 @@ class HouseListActivity : AppCompatActivity() {
 
         typeFilter=findViewById(R.id.typeFilter)
         recyclerView=findViewById(R.id.recyclerView)
+        filterBtn=findViewById(R.id.filterBtn)
 
         val houseType=intent.getStringExtra("houseType")
-        typeFilter.setText(houseType)
+        typeFilter.text = houseType
         val houseListAdapter=HouseListAdapter(list,applicationContext)
         recyclerView.layoutManager=LinearLayoutManager(this.applicationContext)
         recyclerView.adapter =houseListAdapter

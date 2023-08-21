@@ -31,10 +31,10 @@ class LocationActivity : AppCompatActivity(), OnMapReadyCallback {
     private lateinit var map: GoogleMap
     private lateinit var currLocation : Location
 
-//    companion object {
-//        // Static variable
-//        public lateinit var currAddress:String
-//    }
+    companion object {
+        // Static variable
+         var currAddress:String=""
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_location)
@@ -77,7 +77,7 @@ class LocationActivity : AppCompatActivity(), OnMapReadyCallback {
                 val loc:String= address!![0].locality+", "+address[0].subLocality+", "+address[0].adminArea+", "+address[0].countryName
                 addressName.text=loc
 
-//                currAddress=address[0].locality+", "+address[0].countryName
+                currAddress=address[0].locality+", "+address[0].countryName
             }
         }
 

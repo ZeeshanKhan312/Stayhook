@@ -14,6 +14,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.project.stayhook.R
 import com.project.stayhook.common.HouseListActivity
+import com.project.stayhook.location.LocationActivity.Companion.currAddress
+import com.project.stayhook.search.SearchListActivity
 
 
 class HomeFragment : Fragment() {
@@ -43,7 +45,7 @@ class HomeFragment : Fragment() {
         val view= inflater.inflate(R.layout.fragment_home, container, false)
         initView(view)
 
-//        location.setText(currAddress)
+        location.text = currAddress
 
         val recommendedHouseAdapter=RecommendedHouseAdapter(list,context)
         recommendationRV.layoutManager=LinearLayoutManager(this.context,LinearLayoutManager.HORIZONTAL, false)
@@ -68,7 +70,6 @@ class HomeFragment : Fragment() {
             intent.putExtra("houseType","Recently Added")
             startActivity(intent)
         }
-
 
 
         findFlat.setOnClickListener{
@@ -110,12 +111,23 @@ class HomeFragment : Fragment() {
         findSharedRoom.setOnClickListener{
             val intent=Intent(this.context, HouseListActivity::class.java)
             intent.putExtra("houseType","Shared Room")
+
             startActivity(intent)
         }
         findVilla.setOnClickListener{
             val intent=Intent(this.context, HouseListActivity::class.java)
             intent.putExtra("houseType","Villa")
             startActivity(intent)
+        }
+
+        var searchKey:String=""
+        searchBtn.setOnClickListener{
+            searchKey=searchValue.text.toString()
+            if(searchKey.isNotEmpty()){
+                val intent=Intent(this.context, SearchListActivity::class.java)
+                intent.putExtra("searchKey",searchKey)
+                startActivity(intent)
+            }
         }
 
         return view

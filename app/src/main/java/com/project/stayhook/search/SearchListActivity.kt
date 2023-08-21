@@ -3,6 +3,7 @@ package com.project.stayhook.search
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -13,6 +14,7 @@ import com.project.stayhook.dashboard.DashboardActivity
 class SearchListActivity : AppCompatActivity() {
     private lateinit var searchKey: TextView
     private lateinit var recyclerView: RecyclerView
+    private lateinit var filterBtn:ImageView
 
     val list=ArrayList<String>()
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,6 +23,7 @@ class SearchListActivity : AppCompatActivity() {
 
         searchKey=findViewById(R.id.searchKey)
         recyclerView=findViewById(R.id.recyclerView)
+        filterBtn=findViewById(R.id.filterBtn)
 
         val houseType=intent.getStringExtra("searchKey")
         searchKey.setText(houseType)

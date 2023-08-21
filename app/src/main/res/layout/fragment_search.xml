@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
     tools:context=".search.SearchFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <LinearLayout
+        android:id="@+id/top_layout"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_170sdp"
         android:background="@drawable/curved_top_background"
@@ -17,12 +22,9 @@
             android:layout_marginTop="@dimen/_30sdp"
             android:fontFamily="@font/clearsans_bold"
             android:textColor="@color/white"
-            android:textSize="@dimen/_18ssp"
+            android:textSize="@dimen/_22ssp"
             android:text="Search"
-            android:gravity="center"
-            android:drawableLeft="@drawable/back"
-            android:layout_marginLeft="@dimen/_20sdp"
-            android:layout_marginRight="@dimen/_20sdp"/>
+            android:gravity="center" />
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -36,11 +38,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/white"
-                android:padding="@dimen/_3sdp">
+                android:padding="@dimen/_5sdp">
                 <EditText
                     android:id="@+id/searchValue"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="#00FFFFFF"
+                    android:layout_centerVertical="true"
                     android:layout_toLeftOf="@id/searchBtn"
                     android:layout_alignParentLeft="true"
                     android:drawableLeft="@drawable/location_icon"
@@ -49,12 +53,13 @@
                     android:hint="Find a near place for staying"
                     android:textColorHint="@color/gray1"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/_11ssp"/>
+                    android:textSize="@dimen/_11ssp"
+                    android:maxLines="1"/>
 
                 <ImageView
                     android:id="@+id/searchBtn"
-                    android:layout_width="@dimen/_30sdp"
-                    android:layout_height="@dimen/_30sdp"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
                     android:layout_alignParentRight="true"
                     android:src="@drawable/search"
                     android:layout_gravity="center_vertical"
@@ -64,5 +69,25 @@
     </LinearLayout>
 
 
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_layout"
+        android:layout_marginTop="@dimen/_60sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:fontFamily="@font/clearsans_bold"
+        android:textColor="@color/black"
+        android:text="Nearby Houses"
+        android:textSize="@dimen/_14ssp"/>
 
-</RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/nearHouseRV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/text1"
+            android:padding="@dimen/_5sdp"/>
+
+    </RelativeLayout>
+
+</ScrollView>

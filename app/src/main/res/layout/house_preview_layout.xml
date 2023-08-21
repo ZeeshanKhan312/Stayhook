@@ -16,6 +16,7 @@
             android:id="@+id/housePic"
             android:layout_width="@dimen/_65sdp"
             android:layout_height="@dimen/_65sdp"
+            android:scaleType="centerCrop"
             android:src="@drawable/house_pic"
             android:layout_alignParentLeft="true"/>
 
