@@ -47,14 +47,14 @@ class HomeFragment : Fragment() {
 
         location.text = currAddress
 
-        val recommendedHouseAdapter=RecommendedHouseAdapter(list,context)
+        val recommendedHouseAdapter=RecommendedHouseAdapter(list,requireContext())
         recommendationRV.layoutManager=LinearLayoutManager(this.context,LinearLayoutManager.HORIZONTAL, false)
         recommendationRV.adapter=recommendedHouseAdapter
         getRecommendationList()
         recommendedHouseAdapter.notifyDataSetChanged()
 
 
-        val recentlyAddedAdapter=RecentlyAddedAdapter(list, context)
+        val recentlyAddedAdapter=RecentlyAddedAdapter(list, requireContext())
         recentlyAddedRV.layoutManager=LinearLayoutManager(this.context)
         recentlyAddedRV.adapter=recentlyAddedAdapter
         getRecentlyAddedList()

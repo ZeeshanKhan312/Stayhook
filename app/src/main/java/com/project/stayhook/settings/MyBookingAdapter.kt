@@ -1,15 +1,17 @@
 package com.project.stayhook.settings
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.project.stayhook.R
-import com.project.stayhook.common.HouseListAdapter
+import com.project.stayhook.common.HouseDescriptionActivity
 
 class MyBookingAdapter(val list:ArrayList<String>,val selected: ArrayList<String>,val context: Context?): RecyclerView.Adapter<MyBookingAdapter.MyViewHolder>() {
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -19,6 +21,7 @@ class MyBookingAdapter(val list:ArrayList<String>,val selected: ArrayList<String
         val bookingDetails=itemView.findViewById<TextView>(R.id.bookingDetails)
         val bookingPrice=itemView.findViewById<TextView>(R.id.bookingPrice)
         val actionBtn=itemView.findViewById<TextView>(R.id.actionBtn)
+        val houseCard=itemView.findViewById<RelativeLayout>(R.id.houseCard)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -47,6 +50,10 @@ class MyBookingAdapter(val list:ArrayList<String>,val selected: ArrayList<String
         }
         else{
             holder.actionBtn.visibility=View.GONE
+        }
+
+        holder.houseCard.setOnClickListener{
+            context?.startActivity(Intent(context, HouseDescriptionActivity::class.java))
         }
     }
 }

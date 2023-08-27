@@ -29,56 +29,65 @@
         android:name="com.google.android.gms.maps.SupportMapFragment" />
 
 
-    <TextView
-        android:id="@+id/your_location"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/map"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/_16ssp"
-        android:gravity="center"
-        android:fontFamily="@font/clearsans_medium"
-        android:text="Your Location"
-        android:textColor="@color/gray1"
-        android:textSize="@dimen/_16ssp" />
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/curved_white_background"
+      android:layout_marginTop="@dimen/_395sdp"
+      android:padding="@dimen/_10ssp">
+      <TextView
+          android:id="@+id/your_location"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="@dimen/_16ssp"
+          android:gravity="center"
+          android:fontFamily="@font/clearsans_medium"
+          android:text="Your Location"
+          android:textColor="@color/gray1"
+          android:textSize="@dimen/_16ssp" />
 
-    <View
-        android:id="@+id/line"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_2sdp"
-        android:layout_below="@id/your_location"
-        android:layout_margin="@dimen/_6sdp"
-        android:background="@color/gray4" />
+      <View
+          android:id="@+id/line"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/_2sdp"
+          android:layout_below="@id/your_location"
+          android:layout_marginStart="@dimen/_6sdp"
+          android:layout_marginTop="@dimen/_6sdp"
+          android:layout_marginEnd="@dimen/_6sdp"
+          android:layout_marginBottom="@dimen/_6sdp"
+          android:background="@color/gray4" />
 
-    <TextView
-        android:id="@+id/address"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/line"
-        android:layout_marginStart="@dimen/_20sdp"
-        android:layout_marginTop="@dimen/_8sdp"
-        android:layout_marginEnd="@dimen/_20sdp"
-        android:layout_marginBottom="@dimen/_8sdp"
-        android:fontFamily="@font/clearsans_regular"
-        android:gravity="center_horizontal|top"
-        android:text="Your Location, India"
-        android:textColor="@color/gray2"
-        android:textSize="@dimen/_12ssp" />
+      <TextView
+          android:id="@+id/address"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/line"
+          android:layout_marginStart="@dimen/_20sdp"
+          android:layout_marginTop="@dimen/_8sdp"
+          android:layout_marginEnd="@dimen/_20sdp"
+          android:layout_marginBottom="@dimen/_8sdp"
+          android:fontFamily="@font/clearsans_regular"
+          android:gravity="center_horizontal|top"
+          android:text="Your Location, India"
+          android:textColor="@color/gray2"
+          android:textSize="@dimen/_12ssp" />
 
-    <TextView
-        android:id="@+id/useLocation"
-        android:layout_width="@dimen/_250sdp"
-        android:layout_height="@dimen/_40sdp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/address"
-        android:layout_marginTop="@dimen/_25sdp"
-        android:layout_marginBottom="@dimen/_20sdp"
-        android:text="Use This Location"
-        android:textSize="@dimen/_15ssp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:textColor="@color/white"
-        android:background="@drawable/rectangle_box"
-        android:elevation="20dp"/>
+      <TextView
+          android:id="@+id/useLocation"
+          android:layout_width="@dimen/_250sdp"
+          android:layout_height="@dimen/_40sdp"
+          android:layout_centerHorizontal="true"
+          android:layout_below="@id/address"
+          android:layout_marginTop="@dimen/_25sdp"
+          android:layout_marginBottom="@dimen/_20sdp"
+          android:text="Use This Location"
+          android:textSize="@dimen/_15ssp"
+          android:textStyle="bold"
+          android:gravity="center"
+          android:textColor="@color/white"
+          android:background="@drawable/rectangle_box"
+          android:elevation="20dp"/>
+  </RelativeLayout>
 
 </RelativeLayout>

@@ -8,6 +8,7 @@
     app:cardCornerRadius="@dimen/_15sdp">
 
     <RelativeLayout
+        android:id="@+id/houseCard"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"

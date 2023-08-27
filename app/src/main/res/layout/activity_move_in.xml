@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".booking.MoveInActivity">
+
+    <TextView
+        android:id="@+id/backBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:background="@drawable/curved_top_background"
+        android:padding="@dimen/_10sdp"
+        android:gravity="center"
+        android:fontFamily="@font/clearsans_bold"
+        android:textColor="@color/white"
+        android:text="Move-in date"
+        android:textSize="@dimen/_18ssp"
+        android:drawableLeft="@drawable/back"/>
+
+    <com.applandeo.materialcalendarview.CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/backBtn"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:scrollbarSize="@dimen/_2ssp"
+        app:headerColor="@color/gray2"
+        app:todayLabelColor="@color/colorPrimaryDark"
+        app:selectionColor="@color/dark_green"
+        app:abbreviationsLabelsColor="@color/black"
+        app:selectionLabelColor="@color/dark_green" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/grey_box"
+        android:layout_below="@id/calendarView"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:padding="@dimen/_10sdp"
+        android:columnCount="2">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:fontFamily="@font/clearsans_medium"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp"
+            android:text="Move-In Date"/>
+        <TextView
+            android:id="@+id/moveInDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:fontFamily="@font/clearsans_medium"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/_13ssp"
+            android:text="Nov 13, 2023"/>
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/continueBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@drawable/rectangle_box"
+        android:fontFamily="@font/clearsans_bold"
+        android:textSize="@dimen/_15ssp"
+        android:textColor="@color/white"
+        android:text="Continue to Payment"
+        android:gravity="center"
+        android:padding="@dimen/_5sdp"/>
+</RelativeLayout>

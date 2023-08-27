@@ -26,15 +26,14 @@ class HouseListActivity : AppCompatActivity() {
 
         val houseType=intent.getStringExtra("houseType")
         typeFilter.text = houseType
-        val houseListAdapter=HouseListAdapter(list,applicationContext)
-        recyclerView.layoutManager=LinearLayoutManager(this.applicationContext)
+        val houseListAdapter=HouseListAdapter(list,this)
+        recyclerView.layoutManager=LinearLayoutManager(this)
         recyclerView.adapter =houseListAdapter
         getHouseList(houseType)
 
         houseListAdapter.notifyDataSetChanged()
 
         typeFilter.setOnClickListener {
-            startActivity(Intent(this,DashboardActivity::class.java))
             finish()
         }
 

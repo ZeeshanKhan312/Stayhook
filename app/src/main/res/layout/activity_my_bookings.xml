@@ -10,7 +10,7 @@
     <TextView
         android:id="@+id/text1"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_80sdp"
+        android:layout_height="@dimen/_70sdp"
         android:background="@drawable/curved_top_background"
         android:padding="@dimen/_10sdp"
         android:gravity="center"

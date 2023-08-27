@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/_8sdp"
+    app:cardElevation="@dimen/_5sdp">
+
+    <RelativeLayout
+        android:id="@+id/houseCard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray5"
+        android:padding="@dimen/_13sdp">
+
+        <TextView
+            android:id="@+id/minContract"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/clearsans_bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/_16ssp"
+            android:text="Min 3 Months"/>
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/minContract"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/clearsans_medium"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp"
+            android:text="$ 319/month"/>
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/gray2"
+            android:layout_below="@id/price"
+            android:layout_marginTop="@dimen/_4sdp"/>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:layout_below="@id/line">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/clearsans_regular"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11ssp"
+                android:text="Saving on monthly rental"/>
+
+            <TextView
+                android:id="@+id/monthlyRental"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/clearsans_regular"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11ssp"
+                android:text="0 %"
+                android:layout_gravity="right"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/clearsans_regular"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11ssp"
+                android:text="Early closure charge info"/>
+
+            <TextView
+                android:id="@+id/chargeInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/clearsans_regular"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11ssp"
+                android:text="1 Month's rental"
+                android:layout_gravity="right"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/clearsans_regular"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11ssp"
+                android:text="Free relocation info"/>
+
+            <TextView
+                android:id="@+id/relocationInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/clearsans_regular"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11ssp"
+                android:text="After 6 month"
+                android:layout_gravity="right"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/clearsans_regular"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11ssp"
+                android:text="Free upgrade info"/>
+
+            <TextView
+                android:id="@+id/upgradeInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/clearsans_regular"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11ssp"
+                android:text="After 36 month"
+                android:layout_gravity="right"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/clearsans_regular"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11ssp"
+                android:text="7 days free trial"/>
+
+            <TextView
+                android:id="@+id/freeTrial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/line"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/clearsans_regular"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11ssp"
+                android:text="Yes"
+                android:layout_gravity="right"/>
+        </GridLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

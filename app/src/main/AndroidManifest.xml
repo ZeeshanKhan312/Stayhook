@@ -10,7 +10,7 @@
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
 
     <application
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
@@ -19,6 +19,30 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Stayhook"
         tools:targetApi="31">
+        <activity
+            android:name=".booking.PaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".booking.BookingSummaryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".booking.MoveInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".booking.SelectBedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".booking.ContractTermActivity"
+            android:exported="false" />
+        <activity
+            android:name=".booking.SelectRoomActivity"
+            android:exported="false" />
+        <activity
+            android:name=".booking.ScheduleVisitActivity"
+            android:exported="false" />
+        <activity
+            android:name=".common.HouseDescriptionActivity"
+            android:exported="false" />
         <activity
             android:name=".settings.MyBookingsActivity"
             android:exported="false" />

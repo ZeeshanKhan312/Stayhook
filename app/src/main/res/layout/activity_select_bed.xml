@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".booking.SelectBedActivity">
+
+    <TextView
+        android:id="@+id/backBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:background="@drawable/curved_top_background"
+        android:padding="@dimen/_10sdp"
+        android:gravity="center"
+        android:fontFamily="@font/clearsans_bold"
+        android:textColor="@color/white"
+        android:text="Select a Bed"
+        android:textSize="@dimen/_18ssp"
+        android:drawableLeft="@drawable/back"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/backBtn"
+        android:layout_above="@id/continueBtn"
+        android:padding="@dimen/_5sdp"/>
+    <TextView
+        android:id="@+id/continueBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@drawable/rectangle_box"
+        android:fontFamily="@font/clearsans_bold"
+        android:textSize="@dimen/_15ssp"
+        android:textColor="@color/white"
+        android:text="Room 1- Bed 2"
+        android:gravity="center"
+        android:padding="@dimen/_5sdp"/>
+
+</RelativeLayout>

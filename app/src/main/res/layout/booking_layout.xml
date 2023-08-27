@@ -8,6 +8,7 @@
     app:cardElevation="@dimen/_10sdp"
     app:cardBackgroundColor="@color/white">
     <RelativeLayout
+        android:id="@+id/houseCard"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="@dimen/_5sdp">
@@ -54,24 +55,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/roomDescription"
-            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_6sdp"
             android:fontFamily="@font/clearsans_bold"
-            android:textColor="@color/gray1"
+            android:textColor="@color/gray3"
             android:drawableLeft="@drawable/location_icon"
             android:drawablePadding="@dimen/_4sdp"
             android:text="Noida, India"
-            android:textSize="@dimen/_10ssp"/>
+            android:textSize="@dimen/_9ssp"/>
 
         <TextView
             android:id="@+id/bookingDetails"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/roomLocation"
-            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_8sdp"
             android:fontFamily="@font/clearsans_medium"
             android:textColor="@color/dark_green"
             android:text="Moved-In: Jan 25,2022"
-            android:textSize="@dimen/_10ssp"/>
+            android:textSize="@dimen/_9ssp"/>
 
         <TextView
             android:id="@+id/bookingPrice"
@@ -79,11 +80,11 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_below="@id/roomLocation"
-            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_8sdp"
             android:fontFamily="@font/clearsans_medium"
             android:textColor="@color/black"
             android:text="$999/month"
-            android:textSize="@dimen/_10ssp"/>
+            android:textSize="@dimen/_9ssp"/>
 
         <TextView
             android:id="@+id/actionBtn"
@@ -92,7 +93,7 @@
             android:layout_below="@id/bookingPrice"
             android:padding="@dimen/_3sdp"
             android:layout_marginStart="@dimen/_15sdp"
-            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_11sdp"
             android:layout_marginEnd="@dimen/_15sdp"
             android:background="@drawable/grey_box"
             android:fontFamily="@font/clearsans_bold"

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/_8sdp"
+    app:cardElevation="@dimen/_5sdp"
+    android:layout_margin="@dimen/_5sdp">
+
+    <RelativeLayout
+        android:id="@+id/houseCard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray5"
+        android:padding="@dimen/_15sdp">
+        <TextView
+            android:id="@+id/roomNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/clearsans_bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16ssp"
+            android:text="Room 1"/>
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/clearsans_medium"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_15ssp"
+            android:text="$499/month"
+            android:layout_alignParentRight="true"
+            android:layout_alignBottom="@id/roomNo"/>
+
+        <TextView
+            android:id="@+id/roomArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/roomNo"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/clearsans_medium"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_11ssp"
+            android:text="1024 sqft" />
+
+        <TextView
+            android:id="@+id/attachedStuffs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/roomArea"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/clearsans_medium"
+            android:textColor="@color/gray1"
+            android:textSize="@dimen/_13ssp"
+            android:text="1 x Attached Bathroom" />
+        <TextView
+            android:id="@+id/soldOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/attachedStuffs"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/clearsans_regular"
+            android:textColor="@color/red"
+            android:textSize="@dimen/_16ssp"
+            android:text="Sold Out" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

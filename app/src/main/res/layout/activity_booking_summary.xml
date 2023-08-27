@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".booking.BookingSummaryActivity">
+
+    <TextView
+        android:id="@+id/backBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:background="@drawable/curved_top_background"
+        android:padding="@dimen/_10sdp"
+        android:gravity="center"
+        android:fontFamily="@font/clearsans_bold"
+        android:textColor="@color/white"
+        android:text="Booking Summary"
+        android:textSize="@dimen/_18ssp"
+        android:drawableLeft="@drawable/back"/>
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/backBtn"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:fontFamily="@font/clearsans_medium"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16ssp"
+        android:text="Monthly Payable"/>
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text1"
+        android:layout_alignStart="@id/text1"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:fontFamily="@font/clearsans_regular"
+        android:text="Monthly Rent"
+        android:textColor="@color/gray1"
+        android:textSize="@dimen/_13ssp" />
+    <TextView
+        android:id="@+id/monthlyRent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:layout_alignBottom="@id/text2"
+        android:fontFamily="@font/clearsans_regular"
+        android:text="$ 319"
+        android:textColor="@color/gray1"
+        android:textSize="@dimen/_13ssp" />
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text2"
+        android:layout_alignStart="@id/text1"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:fontFamily="@font/clearsans_regular"
+        android:text="Maintenance"
+        android:textColor="@color/gray1"
+        android:textSize="@dimen/_13ssp" />
+    <TextView
+        android:id="@+id/maintenance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:layout_alignBottom="@id/text3"
+        android:fontFamily="@font/clearsans_regular"
+        android:text="$ 31"
+        android:textColor="@color/gray1"
+        android:textSize="@dimen/_13ssp" />
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/grey"
+        android:layout_below="@id/text3"
+        android:layout_alignStart="@id/text1"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_15sdp"/>
+
+    <TextView
+        android:id="@+id/text9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line1"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:fontFamily="@font/clearsans_medium"
+        android:textColor="@color/gray1"
+        android:textSize="@dimen/_16ssp"
+        android:text="Total Monthly Payout"/>
+
+    <TextView
+        android:id="@+id/monthlyPayable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:layout_alignBottom="@id/text9"
+        android:fontFamily="@font/clearsans_bold"
+        android:text="$ 1045"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/_15ssp" />
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/grey"
+        android:layout_below="@id/text9"
+        android:layout_alignStart="@id/text1"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_15sdp"/>
+
+    <TextView
+        android:id="@+id/text4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line2"
+        android:layout_alignStart="@id/text1"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:fontFamily="@font/clearsans_regular"
+        android:drawableLeft="@drawable/info_icon"
+        android:drawablePadding="@dimen/_5sdp"
+        android:text="to be paid every month"
+        android:textColor="@color/gray1"
+        android:textSize="@dimen/_11ssp" />
+    <TextView
+        android:id="@+id/text5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text4"
+        android:layout_alignStart="@id/text1"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:fontFamily="@font/clearsans_regular"
+        android:drawableLeft="@drawable/info_icon"
+        android:drawablePadding="@dimen/_5sdp"
+        android:text="move-in Nov 20, 2023"
+        android:textColor="@color/gray1"
+        android:textSize="@dimen/_11ssp" />
+
+    <TextView
+        android:id="@+id/text6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text5"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:fontFamily="@font/clearsans_medium"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16ssp"
+        android:text="Payable Now"/>
+
+    <TextView
+        android:id="@+id/text7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text6"
+        android:layout_alignStart="@id/text1"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:fontFamily="@font/clearsans_regular"
+        android:text="Refundable Deposit-Security"
+        android:textColor="@color/gray1"
+        android:textSize="@dimen/_13ssp" />
+    <TextView
+        android:id="@+id/refundableDeposit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:layout_alignBottom="@id/text7"
+        android:fontFamily="@font/clearsans_regular"
+        android:text="$ 319"
+        android:textColor="@color/gray1"
+        android:textSize="@dimen/_13ssp" />
+    <TextView
+        android:id="@+id/text8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text7"
+        android:layout_alignStart="@id/text1"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:fontFamily="@font/clearsans_regular"
+        android:text="1 Month Advance"
+        android:textColor="@color/gray1"
+        android:textSize="@dimen/_13ssp" />
+    <TextView
+        android:id="@+id/advancePayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:layout_alignBottom="@id/text8"
+        android:fontFamily="@font/clearsans_regular"
+        android:text="$ 319"
+        android:textColor="@color/gray1"
+        android:textSize="@dimen/_13ssp" />
+
+    <View
+        android:id="@+id/line3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/grey"
+        android:layout_below="@id/text8"
+        android:layout_alignStart="@id/text1"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_15sdp"/>
+
+    <TextView
+        android:id="@+id/text10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line3"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:fontFamily="@font/clearsans_medium"
+        android:textColor="@color/gray1"
+        android:textSize="@dimen/_16ssp"
+        android:text="Total Payable Now"/>
+
+    <TextView
+        android:id="@+id/totalPayableNow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:layout_alignBottom="@id/text10"
+        android:fontFamily="@font/clearsans_bold"
+        android:text="$ 628"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/_16ssp" />
+
+    <TextView
+        android:id="@+id/payBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@drawable/rectangle_box"
+        android:fontFamily="@font/clearsans_bold"
+        android:textSize="@dimen/_18ssp"
+        android:textColor="@color/white"
+        android:text="Pay Now"
+        android:gravity="center"
+        android:padding="@dimen/_5sdp"/>
+
+
+</RelativeLayout>

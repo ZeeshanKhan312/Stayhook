@@ -6,7 +6,7 @@
         android:color="@color/gray5"/>
 
     <corners
-        android:radius="@dimen/_10sdp"/>
+        android:radius="@dimen/_6sdp"/>
 
     <!--    <gradient-->
     <!--        android:startColor="@color/colorPrimaryDark"-->

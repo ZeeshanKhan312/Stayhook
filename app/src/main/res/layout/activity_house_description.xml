@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".common.HouseDescriptionActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/_10sdp">
+
+        <ImageView
+            android:id="@+id/housePhoto"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_250sdp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/house_photo" />
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:padding="@dimen/_2sdp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:src="@drawable/back"/>
+
+        <ImageView
+            android:id="@+id/favtBtn"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:padding="@dimen/_2sdp"
+            android:background="@drawable/grey_box"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:src="@drawable/heart"/>
+
+        <LinearLayout
+            android:id="@+id/layout_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_225sdp"
+            android:orientation="horizontal"
+            android:background="@drawable/curved_white_background"
+            android:padding="@dimen/_6sdp">
+            <TextView
+                android:id="@+id/houseCategory"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/clearsans_regular"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_10ssp"
+                android:text="Shared Room"
+                android:layout_marginLeft="@dimen/_10sdp"/>
+            <TextView
+                android:id="@+id/houseRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/clearsans_regular"
+                android:textColor="@color/gray2"
+                android:textSize="@dimen/_10ssp"
+                android:text="4.5 (365 reviews)"
+                android:drawableLeft="@drawable/golden_star"
+                android:drawablePadding="@dimen/_4sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_gravity="right"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/houseName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_1"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:fontFamily="@font/clearsans_bold"
+            android:text="1 Big hall at Lalitpur"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"/>
+        <TextView
+            android:id="@+id/houseLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/houseName"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:fontFamily="@font/clearsans_regular"
+            android:text="701 Ocean Avenue, Unit 103, Lalitpur"
+            android:textColor="@color/gray2"
+            android:textSize="@dimen/_10ssp"
+            android:drawableLeft="@drawable/location_icon"
+            android:drawablePadding="@dimen/_4sdp"/>
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/houseLocation"
+            android:layout_alignStart="@id/houseName"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:fontFamily="@font/clearsans_medium"
+            android:textStyle="bold"
+            android:text="Stayhook Manager"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12ssp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/managerPhoto"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_below="@id/text1"
+            android:layout_alignStart="@id/houseName"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginRight="@dimen/_12sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profile_image" />
+
+        <TextView
+            android:id="@+id/managerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/managerPhoto"
+            android:layout_toRightOf="@id/managerPhoto"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/clearsans_medium"
+            android:text="Danish Khan"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_11ssp" />
+
+        <TextView
+            android:id="@+id/managerPosition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_alignBottom="@id/managerPhoto"
+            android:layout_toRightOf="@id/managerPhoto"
+            android:fontFamily="@font/clearsans_medium"
+            android:text="Manager"
+            android:textColor="@color/gray2"
+            android:textSize="@dimen/_11ssp" />
+
+        <TextView
+            android:id="@+id/contactManager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_below="@id/text1"
+            android:layout_marginTop="@dimen/_26sdp"
+            android:background="@drawable/grey_box"
+            android:padding="@dimen/_3sdp"
+            android:fontFamily="@font/clearsans_bold"
+            android:text="Contact"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11ssp" />
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2sdp"
+            android:layout_below="@id/managerPhoto"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:layout_marginBottom="@dimen/_6sdp"
+            android:background="@color/gray4" />
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line1"
+            android:layout_alignStart="@id/houseName"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:fontFamily="@font/clearsans_bold"
+            android:text="Description"
+            android:textColor="@color/gray1"
+            android:textSize="@dimen/_12ssp"/>
+
+        <TextView
+            android:id="@+id/contractTerm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text2"
+            android:layout_alignStart="@id/houseName"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:fontFamily="@font/clearsans_regular"
+            android:text="1 year minimum "
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10ssp"
+            android:drawableLeft="@drawable/calendar_icon"
+            android:drawablePadding="@dimen/_4sdp"/>
+
+        <TextView
+            android:id="@+id/bedsCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text2"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:fontFamily="@font/clearsans_regular"
+            android:text="3 Beds"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10ssp"
+            android:drawableLeft="@drawable/bed_icon"
+            android:drawablePadding="@dimen/_4sdp"/>
+
+
+        <TextView
+            android:id="@+id/bathroomCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/contractTerm"
+            android:layout_alignStart="@id/houseName"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:fontFamily="@font/clearsans_regular"
+            android:text="2 Bathroom"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10ssp"
+            android:drawableLeft="@drawable/bathroom_icon"
+            android:drawablePadding="@dimen/_4sdp"/>
+
+        <TextView
+            android:id="@+id/areaCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/bedsCount"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:fontFamily="@font/clearsans_regular"
+            android:text="1208 sqft"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10ssp"
+            android:drawableLeft="@drawable/area_icon"
+            android:drawablePadding="@dimen/_4sdp"/>
+
+
+        <TextView
+            android:id="@+id/text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bathroomCount"
+            android:layout_alignStart="@id/houseName"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:fontFamily="@font/clearsans_bold"
+            android:text="Facilities"
+            android:textColor="@color/gray1"
+            android:textSize="@dimen/_12ssp"/>
+
+        <GridLayout
+            android:id="@+id/layout_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text3"
+            android:columnCount="2">
+
+            <TextView
+                android:id="@+id/wifi"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:fontFamily="@font/clearsans_regular"
+                android:text="WiFi"
+                android:textColor="@color/gray1"
+                android:textSize="@dimen/_10ssp"
+                android:drawableLeft="@drawable/tick_circle"
+                android:drawablePadding="@dimen/_4sdp"/>
+            <TextView
+                android:id="@+id/parking"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:fontFamily="@font/clearsans_regular"
+                android:text="Parking"
+                android:textColor="@color/gray1"
+                android:textSize="@dimen/_10ssp"
+                android:drawableLeft="@drawable/tick_circle"
+                android:drawablePadding="@dimen/_4sdp"/>
+            <TextView
+                android:id="@+id/kitchen"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:fontFamily="@font/clearsans_regular"
+                android:text="Kitchen"
+                android:textColor="@color/gray1"
+                android:textSize="@dimen/_10ssp"
+                android:drawableLeft="@drawable/tick_circle"
+                android:drawablePadding="@dimen/_4sdp"/>
+            <TextView
+                android:id="@+id/receptionist"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:fontFamily="@font/clearsans_regular"
+                android:text="Receptionist"
+                android:textColor="@color/gray1"
+                android:textSize="@dimen/_10ssp"
+                android:drawableLeft="@drawable/tick_circle"
+                android:drawablePadding="@dimen/_4sdp"/>
+            <TextView
+                android:id="@+id/scan"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:fontFamily="@font/clearsans_regular"
+                android:text="Scan"
+                android:textColor="@color/gray1"
+                android:textSize="@dimen/_10ssp"
+                android:drawableLeft="@drawable/tick_circle"
+                android:drawablePadding="@dimen/_4sdp"/>
+            <TextView
+                android:id="@+id/access"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:fontFamily="@font/clearsans_regular"
+                android:text="24/7 access"
+                android:textColor="@color/gray1"
+                android:textSize="@dimen/_10ssp"
+                android:drawableLeft="@drawable/tick_circle"
+                android:drawablePadding="@dimen/_4sdp"/>
+            <TextView
+                android:id="@+id/teaCoffee"
+                android:layout_width="0dp"
+                android:layout_columnWeight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:fontFamily="@font/clearsans_regular"
+                android:text="Tea &amp; Coffee"
+                android:textColor="@color/gray1"
+                android:textSize="@dimen/_10ssp"
+                android:drawableLeft="@drawable/tick_circle"
+                android:drawablePadding="@dimen/_4sdp"/>
+        </GridLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/layout_3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_170sdp"
+            android:layout_below="@id/layout_2"
+            android:layout_margin="@dimen/_12sdp"
+            app:cardCornerRadius="@dimen/_4sdp"
+            app:cardElevation="@dimen/_10sdp">
+            <fragment
+                android:id="@+id/locationMap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:name="com.google.android.gms.maps.SupportMapFragment" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/text4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_3"
+            android:layout_alignStart="@id/houseName"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:fontFamily="@font/clearsans_bold"
+            android:text="Area &amp; Lot"
+            android:textColor="@color/gray1"
+            android:textSize="@dimen/_12ssp"/>
+
+        <LinearLayout
+            android:id="@+id/layout_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/text4"
+            android:layout_marginTop="@dimen/_10sdp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#F1F1F1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|center_vertical"
+                    android:fontFamily="@font/clearsans_regular"
+                    android:text="STATUS"
+                    android:textSize="@dimen/_10ssp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/gray1"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|center_vertical"
+                    android:fontFamily="@font/clearsans_regular"
+                    android:text="LIVING AREA"
+                    android:textSize="@dimen/_10ssp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/gray1"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|center_vertical"
+                    android:fontFamily="@font/clearsans_regular"
+                    android:text="TYPE"
+                    android:textSize="@dimen/_10ssp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/gray1"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|center_vertical"
+                    android:fontFamily="@font/clearsans_regular"
+                    android:text="YEAR BUILT"
+                    android:textSize="@dimen/_10ssp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/gray1"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|center_vertical"
+                    android:fontFamily="@font/clearsans_regular"
+                    android:text="NEARBY"
+                    android:textSize="@dimen/_10ssp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/gray1"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|center_vertical"
+                    android:fontFamily="@font/clearsans_regular"
+                    android:text="ARCHITECTURE STYLE"
+                    android:textSize="@dimen/_10ssp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/gray1"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|center_vertical"
+                    android:fontFamily="@font/clearsans_regular"
+                    android:text="VIEW DESCRIPTION"
+                    android:textSize="@dimen/_10ssp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:textStyle="bold"
+                    android:textColor="@color/gray1"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:fontFamily="@font/clearsans_regular"
+                    android:text="For Sale"
+                    android:textSize="@dimen/_10ssp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/livingArea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:fontFamily="@font/clearsans_regular"
+                    android:text="1048 sqft"
+                    android:textSize="@dimen/_10ssp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:fontFamily="@font/clearsans_regular"
+                    android:text="Condo"
+                    android:textSize="@dimen/_10ssp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/yearBuilt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:fontFamily="@font/clearsans_regular"
+                    android:text="2008"
+                    android:textSize="@dimen/_10ssp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/nearby"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:fontFamily="@font/clearsans_regular"
+                    android:text="Beach"
+                    android:textSize="@dimen/_10ssp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/architectureStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:fontFamily="@font/clearsans_regular"
+                    android:text="Contemporary"
+                    android:textSize="@dimen/_10ssp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/viewDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:fontFamily="@font/clearsans_regular"
+                    android:text="Ocean"
+                    android:textSize="@dimen/_10ssp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2sdp"
+            android:layout_below="@id/layout_4"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:layout_marginBottom="@dimen/_6sdp"
+            android:background="@color/gray4" />
+
+        <TextView
+            android:id="@+id/text5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line2"
+            android:layout_alignStart="@id/houseName"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/clearsans_regular"
+            android:textColor="@color/gray1"
+            android:textSize="@dimen/_11ssp"
+            android:text="Price"/>
+        <TextView
+            android:id="@+id/housePrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text5"
+            android:layout_alignStart="@id/houseName"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:fontFamily="@font/clearsans_medium"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_15ssp"
+            android:text="$1200/month"/>
+
+        <TextView
+            android:id="@+id/scheduledVisit"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line2"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_12sdp"
+            android:background="@drawable/rectangle_box"
+            android:fontFamily="@font/clearsans_bold"
+            android:textColor="@color/white"
+            android:padding="@dimen/_5sdp"
+            android:textSize="@dimen/_12ssp"
+            android:text="Shedule Visit"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/reserveBtn"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/scheduledVisit"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_12sdp"
+            android:background="@drawable/rectangle_box"
+            android:fontFamily="@font/clearsans_bold"
+            android:textColor="@color/white"
+            android:padding="@dimen/_5sdp"
+            android:textSize="@dimen/_12ssp"
+            android:text="Reserve Room"
+            android:gravity="center"/>
+
+    </RelativeLayout>
+
+</ScrollView>

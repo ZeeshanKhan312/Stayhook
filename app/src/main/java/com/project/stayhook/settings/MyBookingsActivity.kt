@@ -32,12 +32,11 @@ class MyBookingsActivity : AppCompatActivity() {
 
         selected.add(0,"current")
         getBookingList(selected)
-        val myBookingAdapter= MyBookingAdapter(list,selected,applicationContext)
-        bookingsRV.layoutManager= LinearLayoutManager(this.applicationContext)
+        val myBookingAdapter= MyBookingAdapter(list,selected,this)
+        bookingsRV.layoutManager= LinearLayoutManager(this)
         bookingsRV.adapter=myBookingAdapter
 
         backBtn.setOnClickListener {
-            startActivity(Intent(this,DashboardActivity::class.java))
             finish()
         }
 

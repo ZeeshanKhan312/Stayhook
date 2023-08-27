@@ -1,8 +1,11 @@
 package com.project.stayhook.search
 
+import android.app.Dialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.ViewGroup
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -27,8 +30,8 @@ class SearchListActivity : AppCompatActivity() {
 
         val houseType=intent.getStringExtra("searchKey")
         searchKey.setText(houseType)
-        val houseListAdapter= HouseListAdapter(list,applicationContext)
-        recyclerView.layoutManager= LinearLayoutManager(this.applicationContext)
+        val houseListAdapter= HouseListAdapter(list,this)
+        recyclerView.layoutManager= LinearLayoutManager(this)
         recyclerView.adapter =houseListAdapter
         getHouseList(houseType)
 
@@ -37,6 +40,26 @@ class SearchListActivity : AppCompatActivity() {
         searchKey.setOnClickListener {
             startActivity(Intent(this, DashboardActivity::class.java))
             finish()
+        }
+
+        val dialog= Dialog(this)
+        dialog.setContentView(R.layout.filter_dialog_layout)
+        dialog.window?.setLayout(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+        dialog.setCancelable(false)
+        val advanceSearch: TextView =dialog.findViewById(R.id.searchBtn)
+        val advanceSearchKey: EditText =dialog.findViewById(R.id.addressSearch)
+        filterBtn.setOnClickListener{
+            dialog.show()
+        }
+
+        advanceSearch.setOnClickListener {
+            val searchKey=advanceSearchKey.text.toString()
+            if(searchKey.isNotEmpty()) {
+                dialog.dismiss()
+                val intent = Intent(this, SearchListActivity::class.java)
+                intent.putExtra("searchKey", searchKey)
+                startActivity(intent)
+            }
         }
     }
 

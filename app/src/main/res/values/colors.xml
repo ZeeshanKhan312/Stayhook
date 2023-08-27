@@ -27,7 +27,7 @@
     <color name="blue">#14C4E6</color>
     <color name="blue_dark">#364FD4</color>
     <color name="yellow">#FDC34E</color>
-    <color name="black">#FF000000</color>
+    <color name="black">#000000</color>
 
     <!--Recycler Colors-->
     <!--Light-->
