@@ -12,6 +12,7 @@
         android:layout_height="match_parent">
 
         <TextView
+            android:id="@+id/text1"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_170sdp"
             android:background="@drawable/curved_top_background"
@@ -20,6 +21,15 @@
             android:text="Account"
             android:textSize="@dimen/_22ssp"
             android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/editBtn"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_alignBottom="@id/userName"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/edit"
+            android:layout_marginRight="@dimen/_30sdp"/>
 
 
         <de.hdodenhof.circleimageview.CircleImageView

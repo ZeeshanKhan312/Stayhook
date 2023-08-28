@@ -6,4 +6,5 @@
     <string name="schedule_call">Please let us know what number to call at the schedule visit time?</string>
     <string name="schedule_dialog">Our representative will contact you shortly.</string>
     <string name="paymentType">CRED pay/Debit card/Netbanking/UPI</string>
+    <string name="moveout_checkbox">I herby confirm that I\'m moving-out from the property, You agree to our</string>
 </resources>

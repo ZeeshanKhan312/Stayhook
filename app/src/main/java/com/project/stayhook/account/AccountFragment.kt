@@ -1,11 +1,13 @@
 package com.project.stayhook.account
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -14,13 +16,14 @@ import com.project.stayhook.R
 
 class AccountFragment : Fragment() {
 
-    lateinit var userName:TextView
-    lateinit var email:TextView
-    lateinit var phoneNo:TextView
-    lateinit var applied: TextView
-    lateinit var location:TextView
-    lateinit var liked: TextView
-    lateinit var recyclerView: RecyclerView
+    private lateinit var userName:TextView
+    private lateinit var email:TextView
+    private lateinit var phoneNo:TextView
+    private lateinit var applied: TextView
+    private lateinit var location:TextView
+    private lateinit var liked: TextView
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var editBtn:ImageView
     val list=ArrayList<String>()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -33,11 +36,12 @@ class AccountFragment : Fragment() {
         applied=view.findViewById(R.id.applied)
         liked=view.findViewById(R.id.liked)
         recyclerView=view.findViewById(R.id.houseRV)
+        editBtn=view.findViewById(R.id.editBtn)
 
         var selected="applied"
         applied()
-        val libraryAdapter=HousePreviewAdapter(list,context)
-        recyclerView.layoutManager= LinearLayoutManager(this.context)
+        val libraryAdapter=HousePreviewAdapter(list,requireContext())
+        recyclerView.layoutManager= LinearLayoutManager(requireContext())
         recyclerView.adapter=libraryAdapter
 
         applied.setOnClickListener {
@@ -68,7 +72,9 @@ class AccountFragment : Fragment() {
             }
         }
 
-
+        editBtn.setOnClickListener{
+            startActivity(Intent(requireContext(),EditProfileActivity::class.java))
+        }
 
         return view
     }

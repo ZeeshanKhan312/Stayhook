@@ -27,6 +27,13 @@ class SettingsFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_settings, container, false)
         initViews(view)
 
+        myBooking.setOnClickListener {
+            startActivity(Intent(this.context,MyBookingsActivity::class.java))
+        }
+
+        myPayment.setOnClickListener {
+            startActivity(Intent(this.context,MyPaymentsActivity::class.java))
+        }
 
         return view
     }
@@ -43,9 +50,6 @@ class SettingsFragment : Fragment() {
         about=view.findViewById(R.id.about)
         signOut=view.findViewById(R.id.myBooking)
 
-        myBooking.setOnClickListener {
-            startActivity(Intent(this.context,MyBookingsActivity::class.java))
-        }
     }
 
 

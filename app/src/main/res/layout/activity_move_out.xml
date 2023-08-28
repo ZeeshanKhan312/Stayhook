@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".settings.MoveOutActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+        <TextView
+            android:id="@+id/backBtn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:background="@drawable/curved_top_background"
+            android:padding="@dimen/_10sdp"
+            android:gravity="center"
+            android:fontFamily="@font/clearsans_bold"
+            android:textColor="@color/white"
+            android:text="Move-Out"
+            android:textSize="@dimen/_18ssp"
+            android:drawableLeft="@drawable/back"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/image_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_130sdp"
+            android:layout_below="@id/backBtn"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_centerHorizontal="true"
+            app:cardCornerRadius="@dimen/_5sdp">
+            <ImageView
+                android:id="@+id/roomPic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/room_pic"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/roomDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_view"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:fontFamily="@font/clearsans_bold"
+            android:textColor="@color/black"
+            android:text="Mighty Cinco family"
+            android:textSize="@dimen/_15ssp"/>
+
+        <TextView
+            android:id="@+id/roomLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/roomDescription"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_alignStart="@id/roomDescription"
+            android:fontFamily="@font/clearsans_bold"
+            android:textColor="@color/gray3"
+            android:drawableLeft="@drawable/location_icon"
+            android:drawablePadding="@dimen/_4sdp"
+            android:text="Noida, India"
+            android:textSize="@dimen/_9ssp"/>
+
+        <TextView
+            android:id="@+id/bookingDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/roomLocation"
+            android:layout_alignStart="@id/roomDescription"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/clearsans_medium"
+            android:textColor="@color/dark_green"
+            android:text="Moved-In: Jan 25,2022"
+            android:textSize="@dimen/_9ssp"/>
+
+        <TextView
+            android:id="@+id/bookingPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_below="@id/roomLocation"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/clearsans_medium"
+            android:textColor="@color/black"
+            android:text="$999/month"
+            android:textSize="@dimen/_9ssp"/>
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/roomDescription"
+            android:layout_below="@id/bookingPrice"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/clearsans_bold"
+            android:textSize="@dimen/_15ssp"
+            android:textColor="@color/black"
+            android:text="Select Move-Out Date"/>
+
+        <com.applandeo.materialcalendarview.CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text2"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:scrollbarSize="@dimen/_2ssp"
+            app:headerColor="@color/gray2"
+            app:todayLabelColor="@color/colorPrimaryDark"
+            app:selectionColor="@color/dark_green"
+            app:abbreviationsLabelsColor="@color/black"
+            app:selectionLabelColor="@color/dark_green" />
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/calendarView"
+            android:layout_alignStart="@id/roomDescription"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/clearsans_medium"
+            android:textColor="@color/gray2"
+            android:textSize="@dimen/_13ssp"
+            android:text="@string/moveout_checkbox"/>
+
+        <TextView
+            android:id="@+id/termsCondition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/roomDescription"
+            android:layout_below="@id/checkbox"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:fontFamily="@font/clearsans_medium"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/_13ssp"
+            android:text="Terms and Condition"/>
+
+        <TextView
+            android:id="@+id/moveOutBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/termsCondition"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:background="@drawable/red_box"
+            android:fontFamily="@font/clearsans_bold"
+            android:textSize="@dimen/_15ssp"
+            android:textColor="@color/white"
+            android:text="Move-Out"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"/>
+
+    </RelativeLayout>
+
+</ScrollView>
